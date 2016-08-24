@@ -1,0 +1,47 @@
+
+v 1 - Repositório
+v 2 - Selinux
+v 3 - Firewalld
+
+1 ETAPA:
+
+#1.1 Verificação se o Repositório Existe:
+  Listar Repositórios Existentes
+  Imprimir na tela a mensagem "Verificando os Repositórios"
+  #yum check repolist (oculto se possivel)
+  
+#1.2 Verificação se o Repositório Existe:
+  Se existir imprimir mensagem "Repositório Instalado"
+    
+    Se não Instale o Repositório:
+  Imprimir a Mensagem "Instalando o Repositório Zabbix ao Sistema"
+    
+    rpm -ivh http:​repo.zabbix.com/​zabbix/​3.0/rhel/7/​x86_64/​zabbix-release-3.0-1.el7.noarch.rpm 
+    
+    Atualizando repostório
+  #yum clean all ; yum update -y  
+  
+
+###Repositorio "OK"###
+
+
+2 ETAPA:
+
+#2.1 Vericar se o SELINUX está ativo:
+  Verificar se o SELINUX está ativo:
+  #cat /etc/sysconfig/selinux
+  (campo para desenvolver o codigo para aprender o comando.)
+  se o selinux estiver ativado 
+    desative
+    Imprima "Atenção o SELINUX foi desabilitado"
+  se nao 
+    Imprima "SELINUX ja está desabilitado"
+    
+  
+###Repositorio "OK"###
+#####Selinux "OK"#####
+
+3 ETAPA:
+
+#3.1 Inserir as Regras do FIREWALLD
+
